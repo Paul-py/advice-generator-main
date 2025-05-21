@@ -1,0 +1,87 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--Green300);
+}
+.attribution a {
+    color: var(--Blue200);
+}
+
+:root{
+    --Blue200: hsl(193, 38%, 86%);
+    --Green300: hsl(150, 100%, 66%);
+    --Blue600: hsl(217, 19%, 38%);
+    --Blue900: hsl(217, 19%, 24%);
+    --Blue950: hsl(218, 23%, 16%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Overpass", sans-serif;
+    background-color: var(--Blue950);
+    min-height: 100vh;
+    padding: 16px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main{
+    background-color: var(--Blue900);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 540px;
+    border-radius: 10px;
+    padding: 30px 20px 0 20px;
+    margin-top: 20%;
+}
+
+h1{
+    font-size: 1.75rem;
+    color: var(--Blue200);
+    font-weight: 800;
+    margin: 24px 0;
+}
+
+p{
+    font-size: 0.80rem;
+    font-weight: 800;
+    color: var(--Blue200);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--Green300);
+}
+
+#breakpoint{
+    content: url("images/pattern-divider-mobile.svg");
+}
+
+button {
+    border: none;
+    background-color: var(--Green300);
+    border-radius: 50%;
+    width: 64px;
+    aspect-ratio: 1/1;
+    transform: translateY(32px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0 0 40px 1px var(--Green300);
+}
+
+@media only screen and (min-width: 550px) {
+    #breakpoint{
+        content: url("images/pattern-divider-desktop.svg");
+    }
+}
